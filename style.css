@@ -8,7 +8,7 @@
 body{
     background-color: #151515;
 }
-.container{
+.container-movie{
     padding-right: 15px;
     padding-left: 15px;
    
@@ -19,9 +19,9 @@ body{
         
 }
 /* убирає боковий скрол бар */
-::-webkit-scrollbar{
+/* ::-webkit-scrollbar{
     display: none;
-}
+} */
 
 .card{
     width: clamp(150px, 95vw, 200px);
@@ -54,7 +54,7 @@ body{
     background-image: linear-gradient(to top, #151515, transparent);
 }
 .info{
-    padding: 2rem 1rem 1rem;
+    padding: 1rem 1rem 1rem;
 }
 .info h2{
 margin-bottom: 0.5rem;

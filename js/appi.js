@@ -8,7 +8,18 @@ const btn = document.querySelector('.search button');
 const mainGridTittle = document.querySelector('.favorites h1');
 const mainGrid = document.querySelector('.favorites .movies-grid');
 
-async function get_movie_by_search (search_term){
-
+// пошук фільмів
+get_movie_by_search()
+async function get_movie_by_search (){
+const resp = await fetch(`https://api.themoviedb.org/3/trending/all/day?api_key=${API_KEY}`);
+const respData = await resp.json();
+console.log(respData.results);
+return respData.results;
 }
-// btn.addEventListener('click', add_searched_movies_to_dom)
+
+// пошук фільма в інпуті
+btn.addEventListener('click', add_searched_movies_to_dom)
+async function add_searched_movies_to_dom(){
+const data = await get_movie_by_search(input.value)
+console.log(data);
+}
